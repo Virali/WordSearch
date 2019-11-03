@@ -3,10 +3,10 @@ function findWords (str, sym) {
 
     let ar = str.match(/\w+/gim);
 
-    if(sym =="ar") {
+    if(sym =="ar" || sym == undefined) {
         return ar;
     }
-
+    // If you choose "object" as returning type, then key name will be "word" + serial number 
     else if(sym == "obj") {
         let storage = {};
         storage.lastword = ar.length;
